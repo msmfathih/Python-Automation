@@ -8,7 +8,7 @@ class TestExecution():
     def test_setUp(self):
         global driver
         driver = webdriver.Chrome(executable_path="E:\\Automation\\Webdrivers\\chromedriver\\chromedriver.exe")
-        driver.implicitly_wait(10)
+        driver.implicitly_wait(5)
         # driver.maximize_window()
         print("Maximized browser")
 
