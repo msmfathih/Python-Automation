@@ -24,7 +24,7 @@ class TestSuiteDemo4(unittest.TestCase):
         self.ack.move_to_element(driver.find_element_by_xpath("//a[contains(text(),'Alerts')]")).click().perform()
         time.sleep(5)
         driver.find_element_by_xpath("//button[@class='btn btn-danger']").click()
-        time.sleep(3)
+        time.sleep(5)
         driver.switch_to.alert.accept()
         driver.quit()
 
