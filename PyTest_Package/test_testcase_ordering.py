@@ -54,6 +54,7 @@ class TestExecution():
         clickRadioBtn1 = driver.find_element_by_xpath("//label[2]//input[1]")
         clickRadioBtn1.click()
 
+
     @pytest.mark.run(order=5)
     def test_check_boxes(self):
         clickCheckBox = driver.find_element_by_id("checkbox1")
