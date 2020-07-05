@@ -26,7 +26,28 @@ class TestSuiteDemo4(unittest.TestCase):
         driver.find_element_by_xpath("//button[@class='btn btn-danger']").click()
         time.sleep(5)
         driver.switch_to.alert.accept()
+
+
+    def test_priority12_get_alert_cancel(self):
+        driver = self.driver
+        self.driver.find_element_by_xpath("//a[contains(text(),'Alert with OK & Cancel')]").click()
+        time.sleep(3)
+        self.driver.find_element_by_xpath("//button[@class='btn btn-primary']").click()
+        time.sleep(3)
+        driver.switch_to.alert.dismiss()
+        time.sleep(3)
+
+    def test_priority13_get_alert_textbox(self):
+        driver = self.driver
+        self.driver.find_element_by_xpath("//a[contains(text(),'Alert with Textbox')]").click()
+        time.sleep(3)
+        self.driver.find_element_by_xpath("//button[@class='btn btn-info']").click()
+        time.sleep(3)
+        driver.switch_to.alert.accept()
+        # driver.switch_to.alert.send_keys("fathih")
         driver.quit()
+
+
 
     @classmethod
     def tearDownClass(cls) -> None:
