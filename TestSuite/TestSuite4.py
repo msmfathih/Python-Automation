@@ -16,7 +16,7 @@ class TestSuiteDemo4(unittest.TestCase):
         cls.driver.implicitly_wait(10)
         cls.driver.get("http://demo.automationtesting.in/Register.html")
 
-    def test_priority11_getalert(self):
+    def test_priority11_get_alert(self):
         driver = self.driver
         self.ack = ActionChains(driver)
         self.ack.move_to_element(driver.find_element_by_xpath("//a[contains(text(),'SwitchTo')]")).perform()
