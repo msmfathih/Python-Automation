@@ -26,7 +26,7 @@ class TestSuiteDemo3(unittest.TestCase):
         self.ack.move_to_element(driver.find_element_by_xpath("//a[contains(text(),'Interactions')]")).perform()
         time.sleep(2)
         self.ack.move_to_element(driver.find_element_by_xpath("//a[contains(text(),'Drag and Drop')]")).perform()
-        time.sleep(2)
+        time.sleep(3)
         self.ack.move_to_element(driver.find_element_by_xpath("//a[contains(text(),'Static')]")).click().perform()
         time.sleep(3)
         driver.quit()
