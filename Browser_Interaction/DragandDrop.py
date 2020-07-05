@@ -19,8 +19,24 @@ time.sleep(5)
 driver.find_element_by_xpath("//button[@class='btn btn-danger']").click()
 time.sleep(2)
 driver.switch_to.alert.accept()
+time.sleep(2)
+
+driver.find_element_by_xpath("//a[contains(text(),'Alert with OK & Cancel')]").click()
+time.sleep(3)
+driver.find_element_by_xpath("//button[@class='btn btn-primary']").click()
+time.sleep(3)
+driver.switch_to.alert.dismiss()
+time.sleep(3)
 
 
+driver.find_element_by_xpath("//a[contains(text(),'Alert with Textbox')]").click()
+time.sleep(3)
+driver.find_element_by_xpath("//button[@class='btn btn-info']").click()
+time.sleep(3)
+driver.switch_to.alert.accept()
+driver.switch_to.alert.send_keys("fathih")
+
+time.sleep(3)
 
 # ack = ActionChains(driver)
 # ack.click().perform()

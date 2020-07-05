@@ -27,7 +27,7 @@ class TestSuiteDemo4(unittest.TestCase):
         time.sleep(5)
         driver.switch_to.alert.accept()
 
-
+    #cancel alert message
     def test_priority12_get_alert_cancel(self):
         driver = self.driver
         self.driver.find_element_by_xpath("//a[contains(text(),'Alert with OK & Cancel')]").click()
@@ -37,6 +37,7 @@ class TestSuiteDemo4(unittest.TestCase):
         driver.switch_to.alert.dismiss()
         time.sleep(3)
 
+    #enter text in laert box
     def test_priority13_get_alert_textbox(self):
         driver = self.driver
         self.driver.find_element_by_xpath("//a[contains(text(),'Alert with Textbox')]").click()
