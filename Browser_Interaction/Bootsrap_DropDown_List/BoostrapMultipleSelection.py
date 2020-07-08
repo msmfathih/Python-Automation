@@ -10,26 +10,26 @@ driver.get("http://demo.automationtesting.in/Register.html")
 driver.implicitly_wait(10)
 
 
+
+
 def select_values(options_list, value):
-    for ele in drop_list:
-        print(ele.text)
-        for k in range(len(value)):  # calling multiple values
-            if ele.text == value[k]:
-                ele.click()
-                break
-
-        if ele.text == value:  #calling multiple values
+    if not value[0] == 'all':
+        for ele in drop_list:
+            print(ele.text)
+            for k in range(len(value)):  # calling multiple values
+                if ele.text == value[k]:
+                    ele.click()
+                    break
+    else:
+        for ele in options_list:
             ele.click()
-            break
-
 
 
 driver.find_element(By.ID, 'msdd').click()
 time.sleep(3)
 drop_list = driver.find_elements(By.CSS_SELECTOR, 'a.ui-corner-all')
 
-value_list = ['Arabic', 'English', 'Dutch', 'French', 'German']
+value_list = ['all']
 select_values(drop_list,value_list)
-
 
 
