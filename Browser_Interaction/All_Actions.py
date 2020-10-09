@@ -5,10 +5,12 @@ from selenium.webdriver.support.select import Select
 import unittest
 
 
+
 driver = webdriver.Chrome(executable_path="E:\\Automation\\Webdrivers\\chromedriver\\chromedriver.exe")
 
 class clickSendKeys():
     def actions(self,driver):
+
         baseUrl = "https://letskodeit.teachable.com/"
         driver.get(baseUrl)
         driver.implicitly_wait(10)
@@ -54,6 +56,7 @@ class clickSendKeys():
         practiceBtnEnabled.is_enabled()
         print("Practice button link is enabled")
         time.sleep(2)
+
 
 
     def selectRadioBtn_CheckBox(self):

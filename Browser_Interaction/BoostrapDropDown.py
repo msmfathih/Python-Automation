@@ -4,8 +4,11 @@ import time
 from selenium.webdriver import chrome
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
-driver = webdriver.Chrome(executable_path="E:\\Automation\\Webdrivers\\chromedriver\\chromedriver.exe")
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
+# driver = webdriver.Chrome(executable_path="E:\\Automation\\Webdrivers\\chromedriver\\chromedriver.exe")
 driver.get("http://demo.automationtesting.in/Register.html")
 driver.implicitly_wait(10)
 

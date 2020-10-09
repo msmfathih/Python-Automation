@@ -56,8 +56,7 @@ class UnitTestExample(unittest.TestCase):
 
     def test_priority4_perform_radio_button(self):
         clickRadioBtn = self.driver.find_element_by_xpath("//label[1]//input[1]")
-        clickRadioBtn.click()
-        time.sleep(2)
+         time.sleep(2)
         clickRadioBtn1 = self.driver.find_element_by_xpath("//label[2]//input[1]")
         clickRadioBtn1.click()
 
@@ -78,7 +77,6 @@ class UnitTestExample(unittest.TestCase):
         time.sleep(2)
         # self.driver.find_element_by_id("msdd").send_keys("Arabic")
         # time.sleep(2)
-
 
 
     def test_priority7_perform_skills(self):

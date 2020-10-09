@@ -26,4 +26,4 @@ time.sleep(2)
 ack.move_to_element(driver.find_element_by_xpath("//a[contains(text(),'Static')]")).click().perform()
 print("Clicked on static page")
 
-driver.quit();
+driver.quit()

@@ -8,8 +8,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 
 
-# driver = webdriver.Chrome(ChromeDriverManager().install())
-driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
+driver = webdriver.Chrome(ChromeDriverManager().install())
+#driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 driver.get("http://demo.automationtesting.in/Register.html")
 driver.implicitly_wait(10)
 

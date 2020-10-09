@@ -1,7 +1,13 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 class browserNavigates():
     def actions(self):
+        # options = webdriver.ChromeOptions()
+        # options.headless = True
+        # driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+
         baseUrl = "https://learn.letskodeit.com/p/practice"
         driver = webdriver.Chrome(executable_path="E:\\Automation\\Webdrivers\\chromedriver\\chromedriver.exe")
         driver.get(baseUrl)

@@ -53,8 +53,7 @@ class TestSuiteDemo4(unittest.TestCase):
     @classmethod
     def tearDownClass(cls) -> None:
         # self.driver.quite()
-        print("Test has completed"
-  )
+        print("Test has completed")
 
 if __name__ == '__main__':
         unittest.main(verbosity=2)

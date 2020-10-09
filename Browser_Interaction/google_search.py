@@ -14,9 +14,10 @@ print(len(optionsList))
 
 for ele in optionsList:
     print(ele.text)
-    if ele.text == 'amazon prime':
+    if ele.text == 'amazon ae':
         ele.click()
         break
+
 
 time.sleep(10)
 driver.quit()

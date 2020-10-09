@@ -2,6 +2,7 @@ from selenium import webdriver
 import time
 import pytest
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
 
 class TestExecution():
     @pytest.mark.run(order=1)
@@ -22,7 +23,7 @@ class TestExecution():
         driver.find_element_by_id("enterimg").click()
         time.sleep(2)
 
-    @pytest.mark.run(order=4)
+    @pytest.mark.run(order=3)
     def test_enterForm(self):
         firstName = driver.find_element_by_xpath("//input[@placeholder='First Name']")
         firstName.send_keys("fathih")
@@ -46,7 +47,7 @@ class TestExecution():
         enterPhoneNumber.send_keys("052854272")
 
 
-    @pytest.mark.run(order=3)
+    @pytest.mark.run(order=4)
     def test_radiobutton(self):
         clickRadioBtn = driver.find_element_by_xpath("//label[1]//input[1]")
         clickRadioBtn.click()
@@ -66,6 +67,19 @@ class TestExecution():
         time.sleep(2)
 
     @pytest.mark.run(order=6)
+    def test_select_language(self):
+        driver.find_element(By.ID, 'msdd').click()
+        time.sleep(3)
+        drop_list = driver.find_elements(By.CSS_SELECTOR, 'a.ui-corner-all')  # get the specific element's class
+        time.sleep(3)
+
+        for ele in drop_list:
+            print(ele.text)
+            if ele.text == 'Dutch':
+                ele.click()
+                break
+
+    @pytest.mark.run(order=7)
     def test_uploadFile(self):
         uploadFile = driver.find_element_by_id("imagesrc")
         uploadFile.send_keys("C://Users//fathih//PycharmProjects//Python Automation//Image//python.png")
@@ -74,8 +88,7 @@ class TestExecution():
 
 
     def test_teardown(self):
-        # driver.quite()
-        # driver.close()
+        #driver.quite()
         print("Test has completed")
 
 
