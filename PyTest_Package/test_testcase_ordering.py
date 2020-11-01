@@ -84,11 +84,10 @@ class TestExecution():
         uploadFile = driver.find_element_by_id("imagesrc")
         uploadFile.send_keys("C://Users//fathih//PycharmProjects//Python Automation//Image//python.png")
         time.sleep(5)
-        # driver.close()
 
 
     def test_teardown(self):
-        #driver.quite()
+        driver.close()
         print("Test has completed")
 
 
