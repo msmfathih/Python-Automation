@@ -10,26 +10,19 @@ driver.get("http://demo.automationtesting.in/Register.html")
 driver.implicitly_wait(10)
 
 
+def select_country(self):
+    self.driver.find_element(By.XPATH, "//*[@class='select2-selection select2-selection--single']").click()
+    time.sleep(2)
+    drop_list = self.driver.find_elements(By.CSS_SELECTOR, 'span.select2-selection__rendered')
 
+    time.sleep(2)
 
-def select_values(options_list, value):
-    if not value[0] == 'all':
-        for ele in drop_list:
-            print(ele.text)
-            for k in range(len(value)):  # calling multiple values
-                if ele.text == value[k]:
-                    ele.click()
-                    break
-    else:
-        for ele in options_list:
+    for ele in drop_list:
+        print(ele.text)
+        if ele.text == "India":
             ele.click()
+            break
 
 
-driver.find_element(By.ID, 'msdd').click()
-time.sleep(3)
-drop_list = driver.find_elements(By.CSS_SELECTOR, 'a.ui-corner-all')
-
-value_list = ['all']
-select_values(drop_list,value_list)
 
 
