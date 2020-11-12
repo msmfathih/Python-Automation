@@ -1,13 +1,15 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-
 import time
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 
 class ListOfElements():
     def testMethod(self):
+        driver = webdriver.Chrome(ChromeDriverManager().install())
         baseUrl = "https://learn.letskodeit.com/p/practice"
-        driver = webdriver.Chrome(executable_path="E:\\Automation\\Webdrivers\\chromedriver\\chromedriver.exe")
+        #driver = webdriver.Chrome(executable_path="E:\\Automation\\Webdrivers\\chromedriver\\chromedriver.exe")
         driver.get(baseUrl)
 
         elementListByClassName = driver.find_elements_by_class_name("inputs")

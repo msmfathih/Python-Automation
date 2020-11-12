@@ -1,13 +1,16 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
 import time
+
 
 class RunFFTests():
     def testMethod(self):
         baseUrl = "https://learn.letskodeit.com/p/practice"
+        driver = webdriver.Chrome(ChromeDriverManager().install())
         #driver = webdriver.Firefox(executable_path="E:\\Automation\\Webdrivers\\geckodriver\\geckodriver.exe")
-        driver = webdriver.Chrome(executable_path="E:\\Automation\\Webdrivers\\chromedriver\\chromedriver.exe")
+        #driver = webdriver.Chrome(executable_path="E:\\Automation\\Webdrivers\\chromedriver\\chromedriver.exe")
         driver.get(baseUrl)
 
         elementById = driver.find_element_by_id("name")

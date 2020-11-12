@@ -1,10 +1,12 @@
 from selenium import webdriver
 import time
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 def setUp():
     global driver
-    driver = webdriver.Chrome(executable_path="E:\\Automation\\Webdrivers\\chromedriver\\chromedriver.exe")
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    #driver = webdriver.Chrome(executable_path="E:\\Automation\\Webdrivers\\chromedriver\\chromedriver.exe")
     driver.implicitly_wait(10)
     driver.maximize_window()
     yield

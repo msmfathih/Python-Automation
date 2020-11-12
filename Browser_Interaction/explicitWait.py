@@ -5,12 +5,15 @@ from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import *
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 
 
 class explicitWait():
     def waitTest(self):
-        driver = webdriver.Chrome(executable_path="E:\\Automation\\Webdrivers\\chromedriver\\chromedriver.exe")
+        driver = webdriver.Chrome(ChromeDriverManager().install())
+        #driver = webdriver.Chrome(executable_path="E:\\Automation\\Webdrivers\\chromedriver\\chromedriver.exe")
         baseURL = "https://www.expedia.com/"
         driver.get(baseURL)
 
