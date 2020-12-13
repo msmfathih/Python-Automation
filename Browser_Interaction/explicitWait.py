@@ -8,8 +8,6 @@ from selenium.common.exceptions import *
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-
-
 class explicitWait():
     def waitTest(self):
         driver = webdriver.Chrome(ChromeDriverManager().install())

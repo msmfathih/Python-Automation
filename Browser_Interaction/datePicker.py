@@ -24,7 +24,7 @@ alldates = driver.find_elements(By.ID, "//div[@class='datepick-popup']//a")
 for date_element in alldates:
     date = date_element.text
     print(date)
-    if date == '20':
+    if date == '30':
         date_element.click()
         break
 

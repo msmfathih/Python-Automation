@@ -8,13 +8,13 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get("https://www.google.com/?gl=us&hl=en&pws=0")
 driver.implicitly_wait(10)
 
-driver.find_element(By.NAME, 'q').send_keys("Amazon ae prime")
+driver.find_element(By.NAME, 'q').send_keys("Amazon ae")
 optionsList = driver.find_elements(By.CSS_SELECTOR, 'ul.erkvQe li span')
 print(len(optionsList))
 
 for ele in optionsList:
     print(ele.text)
-    if ele.text == 'amazon ae prime':
+    if ele.text == 'amazon ae':
         ele.click()
         break
 

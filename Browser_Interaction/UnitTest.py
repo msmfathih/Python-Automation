@@ -150,7 +150,7 @@ class UnitTestExample(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls) -> None:
-        #self.driver.quite()
+        # cls.driver.quite()
         print("Test has completed")
 
 
