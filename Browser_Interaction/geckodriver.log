@@ -1,0 +1,22 @@
+1594403101804	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\fathih\\AppData\\Local\\Temp\\rust_mozprofilebMjJfb"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594403110175	Marionette	INFO	Listening on port 63089
+1594403112350	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/normandy-recipes-capabilities Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: TypeError: NetworkError when attempting to fetch resource.
+  Stack:
+    _validateCollectionSignature@resource://services-settings/RemoteSettingsClient.jsm:766:36
+_importChanges@resource://services-settings/RemoteSettingsClient.jsm:874:20
+
+console.warn: services.settings: main/messaging-experiments sync interrupted by shutdown
+console.warn: services.settings: blocklists/addons sync interrupted by shutdown
+console.warn: services.settings: main/whats-new-panel sync interrupted by shutdown
+1594403616532	Marionette	INFO	Stopped listening on port 63089
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
