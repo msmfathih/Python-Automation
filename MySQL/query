@@ -1,0 +1,42 @@
+SELECT TOP 50 PERCENT * FROM Customers;
+
+SELECT TOP 3 * FROM Customers;
+SELECT * FROM Customers LIMIT 6;
+
+
+SELECT TOP 3 * FROM Customers
+WHERE Country='Germany';
+
+SELECT DISTINCT Country FROM Customers;
+SELECT COUNT(DISTINCT Country) FROM Customers;
+
+
+SELECT * FROM Customers
+WHERE Country='Germany'
+LIMIT 3;
+
+
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;
+
+SELECT * FROM Customers
+ORDER BY Country ASC, CustomerName DESC;
+
+
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
+
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%a';  --CustomerName ending with "a":
+
+
+SELECT * FROM Customers
+WHERE City LIKE 'lo%';
+
+
+
+SELECT * FROM Customers
+WHERE Country IN ('Germany', 'France', 'UK');
+
+SELECT * FROM Customers
+WHERE Country NOT IN ('Germany', 'France', 'UK');
