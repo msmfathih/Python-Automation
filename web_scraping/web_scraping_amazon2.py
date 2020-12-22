@@ -29,7 +29,6 @@ for price in phone_price:
     print(price.text)
     myprice.append(price.text)
 
-
 final_list = zip(myphone,myprice)
 
 for data in list(final_list):

@@ -58,7 +58,6 @@ def select_values(options_list, value):
         for ele in options_list:
             ele.click()
 
-
 driver.find_element(By.ID, 'msdd').click()
 time.sleep(3)
 drop_list = driver.find_elements(By.CSS_SELECTOR, 'a.ui-corner-all')

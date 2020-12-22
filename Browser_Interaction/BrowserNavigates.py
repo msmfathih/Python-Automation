@@ -14,7 +14,6 @@ class browserNavigates():
 
         driver.maximize_window()
 
-
         title = driver.title
         print("title of the page is "+ title)
 

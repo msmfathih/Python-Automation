@@ -1,6 +1,6 @@
-from selenium import webdriver
-import time
 import openpyxl
+from openpyxl import Workbook
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
@@ -12,7 +12,6 @@ driver.find_element(By.ID, "twotabsearchtextbox").send_keys("Samsung Phones")
 driver.find_element(By.XPATH, "//*[@id='nav-search-submit-text']/input").click()
 
 driver.find_element(By.XPATH, "//span[text()='SAMSUNG']").click()
-
 phone_names = driver.find_elements(By.XPATH, "//span[contains(@class, 'a-size-base-plus a-color-base a-text-normal')]")
 
 phone_price = driver.find_elements(By.XPATH, "//span[contains(@class, 'price-whole')]")
@@ -33,7 +32,7 @@ final_list = zip(myphone,myprice)
 print("Part 1")
 
 
-wb = Workbook
+wb = Workbook()
 sh1 = wb.active
 
 for x in list(final_list):
